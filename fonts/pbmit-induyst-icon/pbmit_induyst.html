@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Induyst Webfont</title>
+	<link rel="stylesheet" type="text/css" href="pbmit_induyst.css"/>
+	<meta charset="UTF-8">
+	<style>
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+
+		body {
+			line-height: 1;
+		}
+
+		ol, ul {
+			list-style: none;
+		}
+
+		blockquote, q {
+			quotes: none;
+		}
+
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		body {
+			font-family: Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			line-height: 1.6;
+			color: #777777;
+		}
+
+		a {
+			color: #52D999;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		* {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		[class^="pbmit-induyst-icon-"]:before, [class*=" pbmit-induyst-icon-"]:before, [class^="pbmit-induyst-icon-"]:after, [class*=" pbmit-induyst-icon-"]:after {
+			font-family: pbmit_induyst;
+			font-size: 32px;
+			line-height: 1.25;
+			font-style: normal;
+			margin-left: 20px;
+			color: #424242;
+		}
+
+		.wrapper {
+			max-width: 600px;
+			margin: auto;
+			padding: 0 1em;
+		}
+
+		.title {
+			margin-bottom: 24px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		header {
+			text-align: center;
+			padding: 24px;
+		}
+
+		header .logo {
+			height: auto;
+			border: none;
+			display: inline-block;
+		}
+
+		header strong {
+			font-size: 24px;
+			line-height: 1.25;
+			font-weight: 500;
+			vertical-align: middle;
+		}
+
+		.demo {
+			margin: 2em auto;
+			line-height: 1.25;
+		}
+
+		.demo ul li {
+			margin-bottom: 12px;
+		}
+
+		.demo ul li code {
+			background-color: #121212;
+			border-radius: 3px;
+			padding: 12px;
+			display: inline-block;
+			color: #fff;
+			font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+			font-weight: lighter;
+			margin-top: 12px;
+			font-size: 13px;
+			word-break: break-all;
+		}
+
+		.demo ul li code .red {
+			color: #EB644C;
+		}
+
+		.demo ul li code .green {
+			color: #52D999;
+		}
+
+		.demo ul li code .yellow {
+			color: #FFF4D9;
+		}
+
+		.demo ul li code .blue {
+			color: #648EEF;
+		}
+
+		.demo ul li code .purple {
+			color: #6569BD;
+		}
+
+		.demo ul li code .dots {
+			margin-top: 0.5em;
+			display: block;
+		}
+
+		#glyphs {
+			border-bottom: 1px solid #E5E5E5;
+			padding: 2em 0;
+			text-align: center;
+		}
+
+		.glyph {
+			display: inline-block;
+			width: 9em;
+			margin: 1em;
+			text-align: center;
+			vertical-align: top;
+			background: #FFF;
+		}
+
+		.glyph .pbmit-induyst-icon {
+			padding: 10px;
+			display: block;
+			font-family: "pbmit_induyst";
+			font-size: 64px;
+			line-height: 1;
+		}
+
+		.glyph .pbmit-induyst-icon:before {
+			font-size: 64px;
+			color: #777777;
+			margin-left: 0;
+		}
+
+		.class-name {
+			font-size: 0.65em;
+			background-color: #E5E5E5;
+			color: #9C9C9C;
+			border-radius: 4px 4px 0 0;
+			padding: 0.5em;
+			font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+		}
+
+		.author-name {
+			font-size: 0.6em;
+			background-color: #EFF3F6;
+			border-top: 0;
+			border-radius: 0 0 4px 4px;
+			padding: 0.5em;
+		}
+
+		.author-name a {
+			color: #121212;
+		}
+
+		.class-name:last-child {
+			font-size: 10px;
+			line-height: 1.75;
+			color: #888;
+		}
+
+		.class-name:last-child a {
+			font-size: 10px;
+			line-height: 1.75;
+			color: #555;
+		}
+
+		.glyph > input {
+			display: block;
+			width: 100px;
+			margin: 5px auto;
+			text-align: center;
+			font-size: 12px;
+			line-height: 1.75;
+			cursor: text;
+		}
+
+		.glyph > input.icon-input {
+			font-family: "pbmit_induyst";
+			font-size: 15px;
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+
+		.attribution .title {
+			margin-top: 2em;
+		}
+
+		.attribution textarea {
+			background-color: #F8FAFB;
+			color: #121212;
+			padding: 1em;
+			border: none;
+			box-shadow: none;
+			border: 1px solid #E5E5E5;
+			border-radius: 4px;
+			resize: none;
+			width: 100%;
+			height: 150px;
+			font-size: 13px;
+			line-height: 1.6;
+			font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+			-webkit-appearance: none;
+		}
+
+		.attribution textarea:hover {
+			border-color: #CFD9E0;
+		}
+
+		.attribution textarea:focus {
+			border-color: #52D999;
+		}
+
+		.iconsuse {
+			margin: 2em auto;
+			text-align: center;
+			max-width: 1200px;
+		}
+
+		.iconsuse:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.iconsuse .image {
+			float: left;
+			width: 25%;
+			padding: 0 1em;
+		}
+
+		.iconsuse .image p {
+			margin-bottom: 1em;
+		}
+
+		.iconsuse .image span {
+			display: block;
+			font-size: 0.65em;
+			background-color: #222;
+			color: #fff;
+			border-radius: 4px;
+			padding: 10px;
+			color: #FFFF99;
+			margin-top: 1em;
+			font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+		}
+
+		.pbmit-induyst-icon:before {
+			color: #777777;
+		}
+
+		#footer {
+			text-align: center;
+			background-color: #121212;
+			color: #9C9C9C;
+			padding: 12px;
+			font-size: 13px;
+			line-height: 1.6;
+		}
+
+		#footer a {
+			font-weight: normal;
+		}
+
+		@media (max-width: 960px) {
+			.iconsuse .image {
+				width: 50%;
+			}
+		}
+
+		.preview {
+			width: 100px;
+			display: inline-block;
+			margin: 10px;
+		}
+
+		.preview .inner {
+			display: inline-block;
+			width: 100%;
+			text-align: center;
+			background: #F7F7F7;
+			-webkit-border-radius: 3px 3px 0 0;
+			-moz-border-radius: 3px 3px 0 0;
+			border-radius: 3px 3px 0 0;
+		}
+
+		.preview .inner  {
+			line-height: 85px;
+			font-size: 40px;
+			color: #424242;
+		}
+
+		.label {
+			display: inline-block;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 5px;
+			font-size: 10px;
+			font-family: Monaco, monospace;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			background: #ddd;
+			-webkit-border-radius: 0 0 3px 3px;
+			-moz-border-radius: 0 0 3px 3px;
+			border-radius: 0 0 3px 3px;
+			color: #777;
+		}
+	</style>
+</head>
+<body>
+	<section class="demo wrapper">
+
+		<p class="title">Webfont Instructions</p>
+
+		<ul>
+			<li>
+				<span class="num">1. </span>Copy the "Fonts" files and CSS files to your website CSS folder.
+			</li>
+			<li>
+				<span class="num">2. </span>Add the CSS link to your website source code on header.
+				<code class="big">
+					&lt;<span class="red">head</span>&gt;
+					<br/><span class="dots">...</span>
+					<br/>&lt;<span class="red">link</span> <span class="green">rel</span>=<span
+						class="yellow">"stylesheet"</span> <span class="green">type</span>=<span
+						class="yellow">"text/css"</span> <span class="green">href</span>=<span class="yellow">"your_website_domain/css_root/pbmit_induyst.css"</span>&gt;
+					<br/><span class="dots">...</span>
+					<br/>&lt;/<span class="red">head</span>&gt;
+				</code>
+			</li>
+
+			<li>
+				<p>
+					<span class="num">3. </span>Use the icon class on <code>"<span class="blue">display</span>:<span
+						class="purple"> inline</span>"</code> elements:
+					<br/>
+					Use example: <code>&lt;<span class="red">i</span> <span class="green">class</span>=<span class="yellow">&quot;pbmit-airplane49&quot;</span>&gt;&lt;/<span
+						class="red">i</span>&gt;</code> or <code>&lt;<span class="red">span</span> <span
+						class="green">class</span>=<span class="yellow">&quot;pbmit-airplane49&quot;</span>&gt;&lt;/<span
+						class="red">span</span>&gt;</code>
+			</li>
+		</ul>
+
+	</section>
+	<section id="glyphs">
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-check"></i>
+				<div class="class-name">.pbmit-check</div>
+				<div class="author-name">Author: #author-link-pbmit-check# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-engineering"></i>
+				<div class="class-name">.pbmit-engineering</div>
+				<div class="author-name">Author: #author-link-pbmit-engineering# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-straight-quotes"></i>
+				<div class="class-name">.pbmit-straight-quotes</div>
+				<div class="author-name">Author: #author-link-pbmit-straight-quotes# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-play-button"></i>
+				<div class="class-name">.pbmit-play-button</div>
+				<div class="author-name">Author: #author-link-pbmit-play-button# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-check-1"></i>
+				<div class="class-name">.pbmit-check-1</div>
+				<div class="author-name">Author: #author-link-pbmit-check-1# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-telephone-call"></i>
+				<div class="class-name">.pbmit-telephone-call</div>
+				<div class="author-name">Author: #author-link-pbmit-telephone-call# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-calendar"></i>
+				<div class="class-name">.pbmit-calendar</div>
+				<div class="author-name">Author: #author-link-pbmit-calendar# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-location"></i>
+				<div class="class-name">.pbmit-location</div>
+				<div class="author-name">Author: #author-link-pbmit-location# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-earphone"></i>
+				<div class="class-name">.pbmit-earphone</div>
+				<div class="author-name">Author: #author-link-pbmit-earphone# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-sitemap"></i>
+				<div class="class-name">.pbmit-sitemap</div>
+				<div class="author-name">Author: #author-link-pbmit-sitemap# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-rating"></i>
+				<div class="class-name">.pbmit-rating</div>
+				<div class="author-name">Author: #author-link-pbmit-rating# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-phone-call"></i>
+				<div class="class-name">.pbmit-phone-call</div>
+				<div class="author-name">Author: #author-link-pbmit-phone-call# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-email"></i>
+				<div class="class-name">.pbmit-email</div>
+				<div class="author-name">Author: #author-link-pbmit-email# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-building"></i>
+				<div class="class-name">.pbmit-building</div>
+				<div class="author-name">Author: #author-link-pbmit-building# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-calendar-1"></i>
+				<div class="class-name">.pbmit-calendar-1</div>
+				<div class="author-name">Author: #author-link-pbmit-calendar-1# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-menu"></i>
+				<div class="class-name">.pbmit-menu</div>
+				<div class="author-name">Author: #author-link-pbmit-menu# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-account"></i>
+				<div class="class-name">.pbmit-account</div>
+				<div class="author-name">Author: #author-link-pbmit-account# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-phone"></i>
+				<div class="class-name">.pbmit-phone</div>
+				<div class="author-name">Author: #author-link-pbmit-phone# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-search"></i>
+				<div class="class-name">.pbmit-search</div>
+				<div class="author-name">Author: #author-link-pbmit-search# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-inquiry"></i>
+				<div class="class-name">.pbmit-inquiry</div>
+				<div class="author-name">Author: #author-link-pbmit-inquiry# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-aggreement"></i>
+				<div class="class-name">.pbmit-aggreement</div>
+				<div class="author-name">Author: #author-link-pbmit-aggreement# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-email-1"></i>
+				<div class="class-name">.pbmit-email-1</div>
+				<div class="author-name">Author: #author-link-pbmit-email-1# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-calendar-2"></i>
+				<div class="class-name">.pbmit-calendar-2</div>
+				<div class="author-name">Author: #author-link-pbmit-calendar-2# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-telephone"></i>
+				<div class="class-name">.pbmit-telephone</div>
+				<div class="author-name">Author: #author-link-pbmit-telephone# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-mail"></i>
+				<div class="class-name">.pbmit-mail</div>
+				<div class="author-name">Author: #author-link-pbmit-mail# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-location-1"></i>
+				<div class="class-name">.pbmit-location-1</div>
+				<div class="author-name">Author: #author-link-pbmit-location-1# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-up-right-arrow"></i>
+				<div class="class-name">.pbmit-up-right-arrow</div>
+				<div class="author-name">Author: #author-link-pbmit-up-right-arrow# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-hydroelectric"></i>
+				<div class="class-name">.pbmit-hydroelectric</div>
+				<div class="author-name">Author: #author-link-pbmit-hydroelectric# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-product-box"></i>
+				<div class="class-name">.pbmit-product-box</div>
+				<div class="author-name">Author: #author-link-pbmit-product-box# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-thermal-power"></i>
+				<div class="class-name">.pbmit-thermal-power</div>
+				<div class="author-name">Author: #author-link-pbmit-thermal-power# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-smart-logistics"></i>
+				<div class="class-name">.pbmit-smart-logistics</div>
+				<div class="author-name">Author: #author-link-pbmit-smart-logistics# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-conveyor-system"></i>
+				<div class="class-name">.pbmit-conveyor-system</div>
+				<div class="author-name">Author: #author-link-pbmit-conveyor-system# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-package-loading"></i>
+				<div class="class-name">.pbmit-package-loading</div>
+				<div class="author-name">Author: #author-link-pbmit-package-loading# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-logistic-website"></i>
+				<div class="class-name">.pbmit-logistic-website</div>
+				<div class="author-name">Author: #author-link-pbmit-logistic-website# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-gas-pipeline"></i>
+				<div class="class-name">.pbmit-gas-pipeline</div>
+				<div class="author-name">Author: #author-link-pbmit-gas-pipeline# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-coal-mining"></i>
+				<div class="class-name">.pbmit-coal-mining</div>
+				<div class="author-name">Author: #author-link-pbmit-coal-mining# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-order"></i>
+				<div class="class-name">.pbmit-order</div>
+				<div class="author-name">Author: #author-link-pbmit-order# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-power-plant"></i>
+				<div class="class-name">.pbmit-power-plant</div>
+				<div class="author-name">Author: #author-link-pbmit-power-plant# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-factory"></i>
+				<div class="class-name">.pbmit-factory</div>
+				<div class="author-name">Author: #author-link-pbmit-factory# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-industrial-unit"></i>
+				<div class="class-name">.pbmit-industrial-unit</div>
+				<div class="author-name">Author: #author-link-pbmit-industrial-unit# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-gas-tank"></i>
+				<div class="class-name">.pbmit-gas-tank</div>
+				<div class="author-name">Author: #author-link-pbmit-gas-tank# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-industry"></i>
+				<div class="class-name">.pbmit-industry</div>
+				<div class="author-name">Author: #author-link-pbmit-industry# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-conveyor"></i>
+				<div class="class-name">.pbmit-conveyor</div>
+				<div class="author-name">Author: #author-link-pbmit-conveyor# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-container"></i>
+				<div class="class-name">.pbmit-container</div>
+				<div class="author-name">Author: #author-link-pbmit-container# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-conveyor-belt"></i>
+				<div class="class-name">.pbmit-conveyor-belt</div>
+				<div class="author-name">Author: #author-link-pbmit-conveyor-belt# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-crane-machine"></i>
+				<div class="class-name">.pbmit-crane-machine</div>
+				<div class="author-name">Author: #author-link-pbmit-crane-machine# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-control-panel"></i>
+				<div class="class-name">.pbmit-control-panel</div>
+				<div class="author-name">Author: #author-link-pbmit-control-panel# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-drilling-rig"></i>
+				<div class="class-name">.pbmit-drilling-rig</div>
+				<div class="author-name">Author: #author-link-pbmit-drilling-rig# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-factory-building"></i>
+				<div class="class-name">.pbmit-factory-building</div>
+				<div class="author-name">Author: #author-link-pbmit-factory-building# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-design-tools"></i>
+				<div class="class-name">.pbmit-design-tools</div>
+				<div class="author-name">Author: #author-link-pbmit-design-tools# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-data-management"></i>
+				<div class="class-name">.pbmit-data-management</div>
+				<div class="author-name">Author: #author-link-pbmit-data-management# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-gas-meter"></i>
+				<div class="class-name">.pbmit-gas-meter</div>
+				<div class="author-name">Author: #author-link-pbmit-gas-meter# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-manufacturing"></i>
+				<div class="class-name">.pbmit-manufacturing</div>
+				<div class="author-name">Author: #author-link-pbmit-manufacturing# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-logistic-delivery"></i>
+				<div class="class-name">.pbmit-logistic-delivery</div>
+				<div class="author-name">Author: #author-link-pbmit-logistic-delivery# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-internet-of-things"></i>
+				<div class="class-name">.pbmit-internet-of-things</div>
+				<div class="author-name">Author: #author-link-pbmit-internet-of-things# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-industrial-waste"></i>
+				<div class="class-name">.pbmit-industrial-waste</div>
+				<div class="author-name">Author: #author-link-pbmit-industrial-waste# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-smart-home"></i>
+				<div class="class-name">.pbmit-smart-home</div>
+				<div class="author-name">Author: #author-link-pbmit-smart-home# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-innovation"></i>
+				<div class="class-name">.pbmit-innovation</div>
+				<div class="author-name">Author: #author-link-pbmit-innovation# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-oil-barrel"></i>
+				<div class="class-name">.pbmit-oil-barrel</div>
+				<div class="author-name">Author: #author-link-pbmit-oil-barrel# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-wind-power"></i>
+				<div class="class-name">.pbmit-wind-power</div>
+				<div class="author-name">Author: #author-link-pbmit-wind-power# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-production-report"></i>
+				<div class="class-name">.pbmit-production-report</div>
+				<div class="author-name">Author: #author-link-pbmit-production-report# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-storage-tank"></i>
+				<div class="class-name">.pbmit-storage-tank</div>
+				<div class="author-name">Author: #author-link-pbmit-storage-tank# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-forklift"></i>
+				<div class="class-name">.pbmit-forklift</div>
+				<div class="author-name">Author: #author-link-pbmit-forklift# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-idea"></i>
+				<div class="class-name">.pbmit-idea</div>
+				<div class="author-name">Author: #author-link-pbmit-idea# </div>
+			</div>
+
+			<div class="glyph">
+				<i class="pbmit-induyst-icon pbmit-induyst-icon-next"></i>
+				<div class="class-name">.pbmit-next</div>
+				<div class="author-name">Author: #author-link-pbmit-next# </div>
+			</div>
+
+	</section>
+
+	<div id="footer">
+		<div>Generated by <a href="https://www.pbminfotech.com">PBMinfotech</a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+    <!-- CSS
+        ============================================ -->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="../css/fontawesome.css">
+	<!-- Pbmit Induyst Icon -->
+	<link rel="stylesheet" href="../fonts/pbmit-induyst-icon/pbmit_induyst.css">
+	<!-- Base Icons -->
+	<link rel="stylesheet" href="../css/pbminfotech-base-icons.css"> 
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="../css/themify-icons.css">
+	<!-- Swiper -->
+	<link rel="stylesheet" href="../css/swiper.min.css">
+	<!-- Magnific -->
+	<link rel="stylesheet" href="../css/magnific-popup.css"> 
+	<!-- Shortcode CSS -->
+	<link rel="stylesheet" href="../css/shortcode.css">
+	<!-- Base CSS -->
+	<link rel="stylesheet" href="../css/base.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="../css/responsive.css">
+
+
+
+
+
+    	<!-- Scroll To Top End -->
+ 
+    <!-- JS 
+      	============================================ -->
+	<!-- jQuery JS -->
+	<script src="../js/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="../js/popper.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="../js/bootstrap.min.js"></script>
+	<!-- jquery Waypoints JS -->
+	<script src="../js/jquery.waypoints.min.js"></script>
+	<!-- jquery Appear JS -->
+	<script src="../js/jquery.appear.js"></script>
+	<!-- Numinate JS -->
+	<script src="../js/numinate.min.js"></script>
+	<!-- Slick JS -->
+	<script src="../js/swiper.min.js"></script>
+	<!-- Magnific JS -->
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<!-- Circle Progress JS -->
+	<script src="../js/circle-progress.js"></script>
+	<!-- countdown JS -->
+	<script src="../js/jquery.countdown.min.js"></script> 
+	<!-- masonry JS -->
+	<script src="../js/masonry.pkgd.min.js"></script> 
+	<!-- AOS -->
+	<script src="../js/aos.js"></script>
+	<!-- GSAP -->
+	<script src='../js/gsap.js'></script>
+	<!-- Scroll Trigger -->
+	<script src='../js/ScrollTrigger.js'></script>
+	<!-- Split Text -->
+	<script src='../js/SplitText.js'></script>
+	<!-- Isotope JS -->
+	<script src="../js/isotope.pkgd.min.js"></script>
+	<!-- Theia Sticky Sidebar JS -->
+	<script src='../js/theia-sticky-sidebar.js'></script>
+	<!-- GSAP Animation -->
+	<script src='../js/gsap-animation.js'></script>
+	<!-- Scripts JS -->
+	<script src="../js/scripts.js"></script>
