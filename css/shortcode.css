@@ -3112,6 +3112,13 @@ aside.widget.widget-tag-cloud a,
 .pbmit-hide{
 	display: none;
 }
+
+.client_logo
+{
+	height: 150px;
+	aspect-ratio: 1 / 1; 
+    object-fit: cover;
+}
 /** Style 1 **/
 .pbmit-client-style-1 .pbmit-border-wrapper{
 	display: flex;
