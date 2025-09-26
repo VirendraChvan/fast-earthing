@@ -1,3 +1,8 @@
+
+// Get current year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
 (function ($) {
   "use strict";
 	/*-------------------------------------

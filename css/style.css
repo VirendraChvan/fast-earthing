@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
 }
 .about-one-left-bg{
-	background-image: url(../images/homepage-1/bg/about-img.jpg);
+	background-image: url(../images/Assets/slide-3.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -202,7 +202,7 @@
     background-repeat: no-repeat;
 }
 .testimonial-section-one .video-play-bg{
-	background-image: url(../images/homepage-1/bg/play-bg.jpg);
+	background-image: url(../images/Assets/IMG-20250920-WA0005.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -304,7 +304,7 @@
 	border-radius: 10px;
 }
 .accordion-section-one .accordion-img{
-	background-image: url(../images/homepage-1/bg/accordion-img.jpg);
+	background-image: url(../images/Assets/stock-bg-img/worker.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -325,7 +325,7 @@
 	border-color: #DDDDDD;
 }
 .about-two-img{
-	background-image: url(../images/homepage-2/about-img.jpg);
+	background-image: url(../images/Assets/stock-bg-img/Worker-with-factory.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -434,7 +434,7 @@
 	padding: 15px 70px 0;
 }
 .about-us-two-leftbox{
-	background-image: url(../images/homepage-2/factory-worker-img.jpg);
+	background-image: url(../images/Assets/stock-bg-img/tech-bg.png);
     background-position: top right;
     background-repeat: no-repeat;
 	height: 100%;
@@ -460,7 +460,7 @@
 	padding: 50px 55px 30px;
 	border-radius: 10px;
 	height: 100%;
-	background-image: url(../images/homepage-2/factory-img.png);
+	background-image: url(../images/Assets/stock-bg-img/white-bg-factory.png);
     background-position: 135% -25%;
     background-repeat: no-repeat;
 	background-blend-mode: multiply;
