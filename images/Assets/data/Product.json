@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Maintenance-Free Chemical Pipe Earthing Electrode (GI)",
+    "subtitle": "Earthing & Grounding Systems",
+    "img": "/images/Assets/Products img/HDGI EARTHING ELECTRODE.jpeg",
+    "desc":[ 
+      "Galvanized Iron (GI) chemical pipe earthing electrodes are designed for reliable and efficient earthing. They are filled with hygroscopic and corrosion-resistant compounds that help retain moisture up to 20 times their dry volume.",
+      "This ensures consistent conductivity and long-term protection against soil corrosion. Their maintenance-free design makes them suitable for varied soil conditions, providing stable grounding for electrical and lightning protection systems."
+    ],
+    "features": [
+      "Manufactured using high-quality galvanized iron (GI) pipes.",
+      "Filled with hygroscopic, corrosion-resistant compounds for enhanced moisture retention.",
+      "Highly durable with long service life.",
+      "Maintenance-free design, ensuring consistent performance.",
+      "Excellent corrosion resistance in varied soil environments.",
+      "Ensures safe dissipation of fault currents and lightning surges."
+    ],
+    "applications": "These GI chemical pipe earthing electrodes are widely used in<strong>power distribution systems and substations</strong>, <strong>industrial plants and manufacturing units</strong>, <strong>lightning protection systems</strong>, and <strong>residential as well as commercial buildings</strong>. Their durability and maintenance-free design make them suitable for diverse soil conditions and long-term use."
+  },
+   {
+    "id": 2,
+    "title": "Maintenance-Free Chemical Pipe Earthing Electrode (Copper)",
+    "subtitle": "Earthing & Grounding Systems",
+    "img": "/images/Assets/Products img/COPPER ELECTRODE.jpeg",
+    "desc": [
+      "Copper chemical pipe earthing electrodes are manufactured using premium copper pipes filled with hygroscopic and corrosion-resistant compounds. The filling helps retain moisture up to 20 times its dry volume, ensuring consistent conductivity and superior corrosion resistance.",
+      "Copper electrodes provide excellent electrical conductivity and are highly durable, making them an ideal choice for areas with aggressive soil conditions and critical electrical installations."
+    ],
+    "features": [
+      "Manufactured using high-quality copper pipes for superior conductivity.",
+      "Enhanced resistance to corrosion for longer service life.",
+      "Filled with hygroscopic compounds for better moisture retention.",
+      "Maintenance-free design suitable for all soil types.",
+      "High durability and long-term stable performance.",
+      "Ensures safe dissipation of lightning and fault currents."
+    ],
+    "applications": "Copper chemical pipe earthing electrodes are extensively used in <strong>data centers</strong>, <strong>telecommunication towers</strong>, <strong>industrial and manufacturing plants</strong>, <strong>substations</strong>, and <strong>other critical infrastructure projects</strong> where superior conductivity and corrosion resistance are essential."
+  },
+    {
+    "id": 3,
+    "title": "Maintenance-Free Chemical Pipe Earthing Electrode (Copper Bonded)",
+    "subtitle": "Earthing & Grounding Systems",
+    "img": "/images/Assets/Products img/COPPER BONDED EARTHIING ELECTRODE.jpeg",
+    "desc": [
+      "Copper bonded chemical pipe earthing electrodes are made using mild steel pipes with a molecularly bonded copper layer. These pipes are filled with hygroscopic and corrosion-resistant compounds that retain moisture and improve conductivity.",
+      "They combine the strength of steel with the conductivity of copper, offering a cost-effective yet durable solution for reliable grounding."
+    ],
+    "features": [
+      "Constructed using copper-bonded mild steel pipes for strength and conductivity.",
+      "Molecularly bonded copper layer ensures excellent corrosion resistance.",
+      "Hygroscopic compounds improve moisture retention and conductivity.",
+      "Cost-effective and long-lasting performance.",
+      "Maintenance-free design suitable for varied soil environments.",
+      "Provides efficient dissipation of fault currents and lightning surges."
+    ],
+    "applications": "Copper bonded chemical pipe earthing electrodes are widely used in <strong>commercial and residential buildings</strong>, <strong>power generation plants</strong>, <strong>electrical substations</strong>, and <strong>telecom installations</strong>. They are preferred where a balance between durability, conductivity, and cost-effectiveness is required."
+  }
+]

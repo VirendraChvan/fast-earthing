@@ -1,0 +1,310 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Product</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/images/Assets/Logos/logo-min.jpg">
+    <!-- CSS
+        ============================================ -->
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="/css/fontawesome.css">
+	<!-- Flaticon -->
+	<link rel="stylesheet" href="/css/flaticon.css">
+	<!-- Pbmit Induyst Icon -->
+	<link rel="stylesheet" href="/fonts/pbmit-induyst-icon/pbmit_induyst.css">
+	<!-- Base Icons -->
+	<link rel="stylesheet" href="/css/pbminfotech-base-icons.css">
+	<!-- Themify Icons -->
+	<link rel="stylesheet" href="/css/themify-icons.css">
+	<!-- Swiper -->
+	<link rel="stylesheet" href="/css/swiper.min.css">
+	<!-- Magnific -->
+	<link rel="stylesheet" href="/css/magnific-popup.css"> 
+	<!-- Shortcode CSS -->
+	<link rel="stylesheet" href="/css/shortcode.css">
+	<!-- Base CSS -->
+	<link rel="stylesheet" href="/css/base.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="/css/style.css">
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="/css/responsive.css">
+
+		<script src="/js/comp.js"></script>
+        <script>
+        fetch("/images/Assets/data/Product.json")
+            .then(res => res.json())
+            .then(products => {
+                console.log(products);
+            const params = new URLSearchParams(window.location.search);
+            const productId = parseInt(params.get("id"));
+            const product = products.find(p => p.id === productId);
+
+            if (product) {
+                document.getElementById("product-subtitle").textContent = product.subtitle;
+                document.getElementById("product-title").textContent = product.title;
+                document.getElementById("breadcrumb-title").textContent = product.title;
+                document.getElementById("product-title-2").textContent = product.title;
+               
+
+                document.getElementById("product-img").src = product.img;
+                document.getElementById("product-img").alt = product.title;
+
+                const descElement = document.getElementById("product-desc");
+                if (Array.isArray(product.desc)) {
+                    descElement.innerHTML = product.desc.map(line => `<p>${line}</p>`).join("");
+                    } else {
+                    descElement.textContent = product.desc;
+                    }
+
+                // Features
+                const featureList = document.getElementById("product-features");
+                featureList.innerHTML = "";
+                product.features.forEach(f => {
+                featureList.innerHTML += `
+                    <li class="list-group-item">
+                    <span class="pbmit-icon-list-icon">
+                        <i class="pbmit-base-icon-checkbox"></i>
+                    </span>
+                    <span class="pbmit-icon-list-text">${f}</span>
+                    </li>`;
+                });
+
+                document.getElementById("product-applications").innerHTML = product.applications;
+            } else {
+                document.querySelector(".blog-left-col").innerHTML =
+                "<p>Product not found.</p>";
+            }
+            });
+        </script>
+
+</head>
+
+<body class="single-post">
+
+   <!-- Page Wrapper -->
+   <div class="page-wrapper">
+		
+    <!-- Header Main Area -->
+	<header class="site-header pbmit-header-style-1" id="masthead">
+		<div id="navbar"></div>
+	</header>
+	<!-- Header Main Area End Here -->
+
+    <!-- Title Bar -->
+    <div class="pbmit-title-bar-wrapper">
+        <div class="container">
+            <div class="pbmit-title-bar-content">
+            <div class="pbmit-title-bar-content-inner">
+                <div class="pbmit-tbar">
+                <div class="pbmit-tbar-inner container">
+                    <h3 id="product-subtitle" class="pbmit-tbar-subtitle"></h3>
+                    <h1 id="product-title" class="pbmit-tbar-title"></h1>
+                </div>
+                </div>
+                <div class="pbmit-breadcrumb">
+                <div class="pbmit-breadcrumb-inner">
+                    <span><a href="/product-section.html" class="home"><span>Products</span></a></span>
+                    <span class="sep"></span>
+                    <span><span id="breadcrumb-title"></span></span>
+                </div>
+                </div>
+            </div>
+            </div> 
+        </div> 
+    </div>
+    <!-- Title Bar End -->
+
+	<!-- Page Content -->
+	<div class="page-content"> 
+
+		<!-- Blog Single Details -->
+		<section class="site-content blog-details">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 blog-left-col">
+						<div class="row">
+							<div class="col-md-12">
+					        <article>
+                                <div class="post blog-classic"> 
+                                    <div class="pbmit-img-wrapper">
+                                    <div class="pbmit-featured-wrapper">
+                                        <img id="product-img" class="img-fluid" src="" alt="">
+                                    </div>
+                                    </div>
+                                    <div class="pbmit-blog-classic-inner">
+                                    <h3 class="pbmit-post-title"><p id="product-title-2"></p></h3>
+                                    <div class="pbmit-entry-content">
+                                        <p id="product-desc" class="pbmit-firstletter"></p>
+
+                                        <h3 class="pbmit-custom-title">Key Features</h3>
+                                        <ul id="product-features" class="list-group"></ul>
+
+                                        <h3 class="pbmit-custom-title mt-4">Applications</h3>
+                                        <p id="product-applications"></p>
+                                            <a href="/contact-us.html">
+                                                <button class="pbmit-btn">
+                                                    <span class="form-btn-loader d-none">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100"><circle fill="#fff" stroke="#fff" stroke-width="15" r="15" cx="40" cy="50"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate></circle><circle fill="#fff" stroke="#fff" stroke-width="15" r="15" cx="100" cy="50"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate></circle><circle fill="#fff" stroke="#fff" stroke-width="15" r="15" cx="160" cy="50"><animate attributeName="opacity" calcMode="spline" dur="2" values="1;0;1;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate></circle></svg>
+                                                    </span>
+                                                    <span class="pbmit-button-content-wrapper">
+                                                    <span class="pbmit-button-icon">
+                                                            <i class="pbmit-induyst-icon pbmit-induyst-icon-next"></i>
+                                                    </span>
+                                                    <span class="pbmit-button-text">Contact Us Today</span>
+                                                </span>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    </div>
+                                </div> 
+                            </article>
+								
+							</div> 
+						</div>
+					</div>
+					<div class="col-md-3 blog-right-col">
+						<aside class="sidebar">
+							<aside class="widget widget-categories">
+								<h2 class="widget-title">Categories</h2>
+								<ul>
+									<li>
+										<span class="pbmit-cat-li">
+											<a href="/product-category-EGS.html">Earthing & Grounding Systems</a>
+										</span>
+									</li>
+									<li>
+										<span class="pbmit-cat-li">
+											<a href="/product-category-LPS.html">Lightning Protection Solutions</a>
+										</span>
+									</li>
+									<li>
+										<span class="pbmit-cat-li">
+											<a href="/product-category-CMP.html">Cable Management Products</a>
+										</span>
+									</li>
+									<li>
+										<span class="pbmit-cat-li">
+											<a href="/product-category-SSP.html">Specialty Safety Products</a>
+										</span>
+									</li>
+								</ul>
+							</aside>
+							<aside class="widget pbmit-service-ad">
+								<div class="textwidget">
+									<div class="pbmit-blog-ads-box">
+										<h5 class="pbmit-ad-subheading">WE ARE BEST</h5>
+										<h4 class="pbmit-ad-heading">Manufacturing for <span class="pbmit-global-color"> Better Tomorrow</span></h4>
+										<div class="pbmit-ad-button">
+											<a href="tel:+91-8600779121">
+												<span class="pbmit-button-text">+91 8600779121</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</aside>
+								<aside class="widget pbmit-download-info">
+									<h2 class="widget-title">Company profile</h2>
+									<div class="textwidget">
+										<div class="pbmit-download">
+											
+											<div class="pbmit-item-download">
+												<a href="/images//Assets//doc/fast-earthing-catalogue.pdf" target="_blank" rel="noopener">
+													<div class="pbmit-download-content">
+														<div class="pbmit-download-wrap">
+															<i class="pbmit-base-icon-pdf-file"></i>
+															<div class="pbmit-title-wrap">
+																<h3 class="pbmit-download-title">Download PDF</h3>
+															</div>
+														</div>
+														<span class="pbmit-download-item">
+															<i class="pbminfotech-base-icons pbmit-righticon pbmit-base-icon-download"></i>
+														</span>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</aside>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Blog Single Details End -->
+		 
+		
+	</div>
+	<!-- Page Content End -->
+		
+    <!-- footer -->
+        <footer class="site-footer pbmit-footer-style-1 pbmit-bg-color-blackish">
+				<div id="footer"></div>
+        </footer>
+		
+    <!-- footer End -->
+
+    </div>
+    <!-- Page Wrapper End -->
+
+
+	
+	<!-- Scroll To Top -->
+	<div class="pbmit-backtotop">
+		<div class="pbmit-arrow">
+			<i class="pbmit-base-icon-up-open-big"></i>
+		</div>
+		<div class="pbmit-hover-arrow">
+			<i class="pbmit-base-icon-up-open-big"></i>
+		</div>
+	</div>
+	<!-- Scroll To Top End -->
+	
+    <!-- JS
+        ============================================ -->
+	<!-- jQuery JS -->
+	<script src="/js/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="/js/popper.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="/js/bootstrap.min.js"></script>
+	<!-- jquery Waypoints JS -->
+	<script src="/js/jquery.waypoints.min.js"></script>
+	<!-- jquery Appear JS -->
+	<script src="/js/jquery.appear.js"></script>
+	<!-- Numinate JS -->
+	<script src="/js/numinate.min.js"></script>
+	<!-- Slick JS -->
+	<script src="/js/swiper.min.js"></script>
+	<!-- Magnific JS -->
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<!-- Circle Progress JS -->
+	<script src="/js/circle-progress.js"></script> 
+	<!-- countdown JS -->
+	<script src="/js/jquery.countdown.min.js"></script> 
+	<!-- AOS -->
+	<script src="/js/aos.js"></script>
+	<!-- GSAP -->
+	<script src='/js/gsap.js'></script>
+	<!-- Scroll Trigger -->
+	<script src='/js/ScrollTrigger.js'></script>
+	<!-- Split Text -->
+	<script src='/js/SplitText.js'></script>
+	<!-- Theia Sticky Sidebar JS -->
+	<script src='/js/theia-sticky-sidebar.js'></script>
+	<!-- GSAP Animation -->
+	<script src='/js/gsap-animation.js'></script>
+	<!-- Form Validator -->
+	<script src="/js/jquery-validate/jquery.validate.min.js"></script>
+	<!-- Scripts JS -->
+	<script src="/js/scripts.js"></script>
+
+   </body>
+</html>
