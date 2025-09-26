@@ -48,8 +48,8 @@ function setActiveNav() {
     loadComponent("navbar", "../components/header.html");
     loadComponent("footer", "../components/footer.html");
 
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
-    window.location.reload();
-  }
-});
+// window.addEventListener('pageshow', function(event) {
+//   if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+//     window.location.reload();
+//   }
+// });
